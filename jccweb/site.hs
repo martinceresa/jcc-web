@@ -27,34 +27,39 @@ main = hakyll $ do
                >>= relativizeUrls
     -}
 
-    {-
-       match "data/*" $ do
-           route $ setExtension "html"
-           compile $ pandocCompiler
-               >>= loadAndApplyTemplate "templates/charla.html"    postCtx
-               >>= loadAndApplyTemplate "templates/default.html" postCtx
-               >>= relativizeUrls
-    -}
+    match "data/*" $ do
+     route $ setExtension "html"
+     compile $ pandocCompiler
+      >>= loadAndApplyTemplate "templates/charla.html" charlaCtx
+      >>= loadAndApplyTemplate "templates/default.html" charlaCtx
+      >>= relativizeUrls
 
     match "index.html" $ do
         route idRoute
-        compile $ do
-            charlas <- recentFirst =<< loadAll "charlas/*"
-            let indexCtx =
-                    listField "charlas" postCtx (return charlas) `mappend`
-                    constField "title" "Home"                `mappend`
-                    defaultContext
+        compile $
+            do
+                -- charlas <- recentFirst =<< loadAll (fromGlob "data/*")
+                let indexCtx =
+                        listField "charlas" charlaCtx (loadAll (fromRegex "data/*") :: Compiler [Item String]) `mappend`
+                        constField "title" "Home"                `mappend`
+                        charlaCtx
 
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.html" indexCtx
-                >>= relativizeUrls
+                getResourceBody
+                    >>= applyAsTemplate indexCtx
+                    >>= loadAndApplyTemplate "templates/default.html" indexCtx
+                    >>= relativizeUrls
 
-    match "templates/*" $ compile templateBodyCompiler
-
+    match "templates/*" $ compile $
+        templateCompiler
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
+    defaultContext
+
+charlaCtx :: Context String
+charlaCtx =
+    field "id" (return . itemBody) `mappend`
+    metadataField `mappend`
     defaultContext

@@ -1,10 +1,11 @@
+---
 Author: Alejandro Díaz-Caro
 Institution: UNQ
 ID: 2015-jano
 Link: http://www.unq.edu.ar/
 Title: Introducción a la computación cuántica
-
-Abstract: <p>La computación cuántica es un paradigma de computación
+---
+<p>La computación cuántica es un paradigma de computación
 basado en la física cuántica. La idea es tomar la descripción de la
 evolución de sistemas físicos cuánticos como un proceso de cómputo:
 éstos tienen un estado inicial, un estado final, y la evolución del

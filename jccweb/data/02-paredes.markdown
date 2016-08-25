@@ -1,10 +1,11 @@
+---
 Author: Andrés Rojas Paredes
 ID: 2015-paredes
 Institution: FCEyN - UBA
 Link: http://exactas.uba.ar/
 Title: Cotas Inferiores de Complejidad e Ingeniería de Software
-
-Abstract: <p>Una cota inferior de complejidad permite afirmar que todos
+---
+<p>Una cota inferior de complejidad permite afirmar que todos
 los algoritmos que resuelven un problema dado, tienen al menos una
 determinada complejidad, esto incluye a los algoritmos conocidos hoy,
 como también los algoritmos que podrían ser descubiertos en el futuro.

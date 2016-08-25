@@ -1,7 +1,0 @@
-Author: Álvaro Tasistro
-Institution: Universidad ORT - Uruguay
-Link: http://www.ort.edu.uy/
-ID: 2015-tasistro
-Title: Sobre enseñanza de Matemática y Programación en una carrera de Ingeniería de Software
-ShortTitle: Matemática y Programación en una carrera de Ingeniería de Software
-Abstract: 
