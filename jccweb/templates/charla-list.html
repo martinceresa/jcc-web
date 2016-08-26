@@ -1,14 +1,18 @@
+$if(charlas)$
 <ul>
     $for(charlas)$
-    <li>
-        <a href="#$id$" class="facebox-frame"> <b>
-        $autor$
-        $if(inst)$
-            $inst$
-        $endif$
-            </b>
-            $title$
-        </a>
-    </li>
+        <li>
+            <!-- <a href=$id$ class="facebox&#45;frame"> -->
+            <a class="facebox-frame">
+             <b>
+                $autor$
+                $if(inst)$
+                    $inst$
+                $endif$
+             </b>
+                $title$
+            </a>
+        </li>
     $endfor$
 </ul>
+$endif$

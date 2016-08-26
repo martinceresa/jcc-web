@@ -11,6 +11,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "js/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "logos/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -31,18 +35,16 @@ main = hakyll $ do
      route $ setExtension "html"
      compile $ pandocCompiler
       >>= loadAndApplyTemplate "templates/charla.html" charlaCtx
-      >>= loadAndApplyTemplate "templates/default.html" charlaCtx
       >>= relativizeUrls
 
     match "index.html" $ do
         route idRoute
         compile $
             do
-                -- charlas <- recentFirst =<< loadAll (fromGlob "data/*")
                 let indexCtx =
                         listField "charlas" charlaCtx (loadAll (fromRegex "data/*") :: Compiler [Item String]) `mappend`
                         constField "title" "Home"                `mappend`
-                        charlaCtx
+                        defaultContext
 
                 getResourceBody
                     >>= applyAsTemplate indexCtx
@@ -53,13 +55,8 @@ main = hakyll $ do
         templateCompiler
 
 --------------------------------------------------------------------------------
-postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    defaultContext
-
 charlaCtx :: Context String
 charlaCtx =
     field "id" (return . itemBody) `mappend`
-    metadataField `mappend`
+    metadataField `mappend` -- Este no me gusta, pero lo emprolijo dsp
     defaultContext
