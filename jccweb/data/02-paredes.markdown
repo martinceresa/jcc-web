@@ -1,9 +1,9 @@
 ---
-Author: Andrés Rojas Paredes
-ID: 2015-paredes
-Institution: FCEyN - UBA
-Link: http://exactas.uba.ar/
-Title: Cotas Inferiores de Complejidad e Ingeniería de Software
+autor: Andrés Rojas Paredes
+id: 2015-paredes
+institution: FCEyN - UBA
+link: http://exactas.uba.ar/
+title: Cotas Inferiores de Complejidad e Ingeniería de Software
 ---
 <p>Una cota inferior de complejidad permite afirmar que todos
 los algoritmos que resuelven un problema dado, tienen al menos una

@@ -1,9 +1,9 @@
 ---
-Author: Marcelo Frias
-Institution: ITBA
-ID: 2015-frias
-Link: http://itba.edu.ar/
-Title: Localización y Reparación Automática de Fallas
+autor: Marcelo Frias
+institution: ITBA
+id: 2015-frias
+link: http://itba.edu.ar/
+title: Localización y Reparación Automática de Fallas
 ---
 
 <p>En esta charla presentaré trabajo reciente sobre
