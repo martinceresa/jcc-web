@@ -1,7 +1,7 @@
 ---
 autor: Alejandro Díaz-Caro
 institution: UNQ
-id: 2015-jano
+cid: 2015-jano
 link: http://www.unq.edu.ar/
 title: Introducción a la computación cuántica
 ---

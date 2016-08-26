@@ -1,0 +1,23 @@
+<!-- algo de charlas? -->
+$for(charlas)$
+    <div id="$cid$" class="descr-charla" style="display: none;">
+        <h3>$title$</h3>
+            $body$
+            <p class="autor"> por $autor$
+                $if(inst)$
+                    $if(link)$
+                        <a target="_blank" href=$link$>
+                            $inst$
+                        </a>
+                    $else$
+                        ($inst$)
+                    $endif$
+                $endif$
+            </p>
+            $if(slides)$
+                <p>
+                <a href="slides/$slides$$$"$$><b>Slides</b></a>
+                </p>
+            $endif$
+    </div>
+$endfor$

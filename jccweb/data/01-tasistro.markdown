@@ -1,5 +1,5 @@
 ---
-id: 01
+cid: 01
 autor: Álvaro Tasistro
 inst: Universidad ORT - Uruguay
 link: http://www.ort.edu.uy/

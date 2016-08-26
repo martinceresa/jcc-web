@@ -1,6 +1,6 @@
 ---
 autor: Andrés Rojas Paredes
-id: 2015-paredes
+cid: 2015-paredes
 institution: FCEyN - UBA
 link: http://exactas.uba.ar/
 title: Cotas Inferiores de Complejidad e Ingeniería de Software
