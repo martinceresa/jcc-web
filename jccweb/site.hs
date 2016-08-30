@@ -49,6 +49,9 @@ main = hakyll $ do
 --------------------------------------------------------------------------------
 charlaCtx :: Context String
 charlaCtx =
-    field "id" (return . itemBody) `mappend`
+    field "cid" (return . itemBody) `mappend`
     metadataField `mappend` -- Este no me gusta, pero lo emprolijo dsp
     defaultContext
+
+createId :: Context String
+createIde =

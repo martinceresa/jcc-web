@@ -1,6 +1,6 @@
 <!-- algo de charlas? -->
 $for(charlas)$
-    <div id="$cid$" class="descr-charla" style="display: none;">
+    <div id="$url$" class="descr-charla" >
         <h3>$title$</h3>
             $body$
             <p class="autor"> por $autor$
@@ -16,7 +16,7 @@ $for(charlas)$
             </p>
             $if(slides)$
                 <p>
-                <a href="slides/$slides$$$"$$><b>Slides</b></a>
+                <a href="slides/$slides$"><b>Slides</b></a>
                 </p>
             $endif$
     </div>
